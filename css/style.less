@@ -86,7 +86,7 @@ a {
 }
 .phone {
   background-color: var(--background);
-  height: 740px;
+  height: 80vh;
   width: 360px;
   border-radius: 25px;
   box-shadow: rgba(104, 139, 255, 0.1) 0px 48px 100px 0px, rgba(17, 12, 46, 0.15) 0px 30px 100px 0px;
@@ -308,4 +308,18 @@ box-shadow: inset 2px 2px 2px 0 rgba(104, 139, 255, 0.1), rgba(0, 0, 0, 0.1) 0px
   box-shadow: inset 6px 6px 10px 0 rgba(0, 0, 0, 0.2);
   background-color: #779bff;
   color: #fff;
+}
+/* 小于 500px 采用这个样式 */
+@media screen and (max-width: 500px) {
+  .phone {
+      height: 90vh;
+  }
+}
+
+/* 小于 390px 采用这个样式 */
+@media screen and (max-width: 390px) {
+  /* 歌单时间*/
+  .time-slider {
+    margin: 5% 5%;
+  }
 }
