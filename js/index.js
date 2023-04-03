@@ -2,6 +2,7 @@ $(function(){
     //获取本地缓存数据
     let locList = localStorage.getItem('musicList')
     let $playList = $('.right .list ul').html(locList)
+    let $ul = $('.left ul');
     if($(' .list li').length!==0){
       $('.list li').fadeIn()
     }else{
@@ -34,7 +35,7 @@ $(function(){
             $(".artist").text(artist);     //更换歌手
     })
   
-    var $ul = $('.left ul');
+   
     // 发起请求并渲染页面
     async function getSearcher(str){  
         const { data:res } = await axios.get('https://autumnfish.cn/search',{
@@ -181,8 +182,9 @@ $(function(){
     });
     //点击搜索框搜索按钮后
     $('.search_btn').click(function(){
-//         console.log('点击搜索按钮');
-        layer.msg('搜索中，请稍后')
+         //         console.log('点击搜索按钮');
+        //         layer.msg('搜索中，请稍后')
+        layer.msg('搜索中，请稍后...', {icon: 16,shade: [0.3, '#f5f5f5'],scrollbar: false,offset: 'auto', time:1000});
         getSearcher($('.searcher').val());
 
         setTimeout(function(){
@@ -210,7 +212,7 @@ $(function(){
 
     })
 
-    //点击右上角按钮打开播放列表
+    //点击打开播放列表
     $('.playList').click(function(){  
         
         layer.open({
