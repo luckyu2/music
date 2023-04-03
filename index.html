@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet/less" href="./css/style.less">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="shortcut icon" href="./img/icon.ico">
+    <audio id="audio" controls autoplay src="" style="display: none;"></audio>
+</head>
+<body>
+    <div class="container"> 
+        <div class="phone light">
+            <div class="top-menu">
+                <div class="button search">
+                    <i data-toggle="tooltip" data-placement="top" title="搜索" class="fa fa-search"></i>
+                </div>
+                <button  class="button mode">
+                    <i data-toggle="tooltip" data-placement="bottom" title="切换深&浅色模式" class="bi bi-brightness-high-fill" class="toggleDark"></i> 
+                </button>
+                <div class="button playList">
+                    <i data-toggle="tooltip" data-placement="top" title="播放列表" class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div class="search_container">
+                <div class="search_box">
+                    <input type="search" name="username" class="searcher" placeholder="请输入歌名或歌手">
+                    <span>
+                        <button class="search_btn" type="button"><i class="fa fa-search"></i></button>
+                    </span>
+                </div>
+            </div>
+            
+            <div class="thumbnail-border">
+                <div class="pipe" style="transform: rotate(-40deg)">
+                <!-- <div class="pipe" style="transform: rotate(0deg)"> -->
+                </div>
+                <div class="turnDisc">
+                    <img src="https://s2.loli.net/2023/03/25/h16OdLIHGNbjYMX.png" alt="">
+                </div>
+            </div>
+            
+            <div class="song-details">
+                <h1 class="song-title">SUMMER</h1>
+                <span class="artist">Band ft. Song Artist</span>
+            </div>
+
+            <div class="time-slider">
+                <div class="slider-times">
+                    <span>0:00</span> 
+                    <span>5:20</span> 
+                </div>
+            <input type="range" min="1" max="100" value="0" class="slider" id="myRange">
+            </div>
+            
+            <div class="song-controls">
+                <div class="button">
+                    <i class="fa fa-random"></i>
+                </div>
+                <div class="button">
+                    <i class="fas fa-backward"></i>
+                </div>
+                <div class="button music-play">
+                    <i style="font-size:26px" class="bi bi-pause-fill"></i>
+                </div>
+                <div class="button">
+                    <i class="fas fa-forward"></i>
+                </div>
+                <div class="button chatList">
+                    <i class="bi bi-chat-dots-fill"></i>
+                </div>
+            </div>
+        </div> 
+    </div>
+    <div class="hideBox" style="z-index: -111;width: 40%;">
+        <div class="left">
+            <ul></ul>
+        </div>
+        <div class="right">
+            <div  class="list">
+                <ul></ul>
+            </div>
+            <div class="comment">
+                <ul></ul>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="./js/bootstrap.min.js"></script> -->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/less_main.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/axios.js"></script>
+    <!-- layer弹窗插件 -->
+    <script src="plugins/layer/layer.js"></script>
+</body>
+    
+</html>
