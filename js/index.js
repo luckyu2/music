@@ -181,7 +181,7 @@ $(function(){
     });
     //点击搜索框搜索按钮后
     $('.search_btn').click(function(){
-        console.log('点击搜索按钮');
+//         console.log('点击搜索按钮');
         layer.msg('搜索中，请稍后')
         getSearcher($('.searcher').val());
 
@@ -205,7 +205,7 @@ $(function(){
                 //     // return false        //开启该代码可禁止点击该按钮关闭
                 // }
             }); 
-        },1000);
+        },2000);
         
 
     })
