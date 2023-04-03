@@ -33,6 +33,7 @@ $(function(){
             //更改播放界面的歌名和歌手
             $(".song-title").text(songs);   //更换歌名
             $(".artist").text(artist);     //更换歌手
+            clickPlay()        //播放音乐
     })
   
    
@@ -296,17 +297,7 @@ $(function(){
         clickPlay()
     }
 
-     // 播放和暂停按键设置点击中间播放按钮
-    $('.music-play').click(function() {
-        if (audio.paused) {
-            audio.play();
-            clickPlay();
-          } else {
-            audio.pause();
-            clickPlay();
-          }
-        // console.log(audio.paused);   
-    });
+   
    
     var audio = $('#audio')[0]
     var pipe = $('.pipe');
@@ -335,6 +326,16 @@ $(function(){
         // endUpdate();
         }
     }
+    
+      // 播放和暂停按键设置点击中间播放按钮
+    $('.music-play').click(function() {
+        if (audio.paused) {
+            audio.play();
+          } else {
+            audio.pause();
+          }
+        // console.log(audio.paused);   
+    });
     // 深色浅色模式切换
     $('.mode').click(function() {
         $('.phone').toggleClass('dark');
